@@ -12,7 +12,7 @@ import { useConvex } from 'convex/react'
 import { SidebarProvider } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/custom/AppSidebar'
 import { PayPalScriptProvider } from '@paypal/react-paypal-js'
-import { ActionContext } from '@/context/actionContext'
+import { ActionContext } from '@/context/ActionContext'
 import { useRouter } from 'next/navigation'
 const Provider = ({children}) => {
   const [messages, setmessages] = useState()

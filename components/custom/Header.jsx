@@ -5,7 +5,7 @@ import React, { useContext, useEffect } from 'react'
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import { UserdetailContext } from '@/context/UserdetailContext';
-import { ActionContext } from '@/context/actionContext';
+import { ActionContext } from '@/context/ActionContext';
 const Header = () => {
   const {userdetails,setuserdetails}=useContext(UserdetailContext);
   const {action,setaction}=useContext(ActionContext);
