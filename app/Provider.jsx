@@ -48,11 +48,11 @@ const Provider = ({children}) => {
   // };
 
   // console.log("Google Client ID:", process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID);
-  // const redirectUri = process.env.NEXT_PUBLIC_APP_URL || window.location.origin; // In production, `NEXT_PUBLIC_APP_URL` should be set in `.env.production`
+  const redirectUri = process.env.NEXT_PUBLIC_APP_URL || window.location.origin; // In production, `NEXT_PUBLIC_APP_URL` should be set in `.env.production`
 
   return (
     <div>
-      <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
+      <GoogleOAuthProvider redirectUri={redirectUri} clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
       {/* <GoogleLogin
         onSuccess={handleGoogleLoginSuccess}
         onFailure={handleGoogleLoginFailure}
