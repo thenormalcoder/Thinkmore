@@ -157,7 +157,7 @@ const Chatview = () => {
         )):null}
       {loading && <div className='py-4 px-5 rounded-xl bg-neutral-600 flex items-center gap-4 mb-3'>
          <Loader2Icon className='animate-spin'/>
-         <h2>Waiting for response...</h2>
+         <h2>Waiting for the response...</h2>
       </div>
 }
 </div>
