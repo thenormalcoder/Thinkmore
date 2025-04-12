@@ -37,7 +37,7 @@ const Provider = ({children}) => {
   }, [])
   return (
     <div>
-      <GoogleOAuthProvider clientId="718765508433-96f8pv6gdcpm2uu5g0temu0clgqundbi.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}>
       <PayPalScriptProvider options={{ clientId:process.env.NEXT_PUBLIC_PAYPAL_CLIENTID}}>
       <UserdetailContext.Provider value={{userdetails,setuserdetails}}>
        <MessagesContext.Provider value={{messages, setmessages}}>
