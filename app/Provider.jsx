@@ -35,9 +35,10 @@ const Provider = ({children}) => {
   useEffect(() => {
     Isauthenticated();
   }, [])
+  console.log("Google Client ID:", process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID);
   return (
     <div>
-      <GoogleOAuthProvider clientId={{clientid:process.env.GOOGLE_CLIENT_ID}}>
+      <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
       <PayPalScriptProvider options={{ clientId:process.env.NEXT_PUBLIC_PAYPAL_CLIENTID}}>
       <UserdetailContext.Provider value={{userdetails,setuserdetails}}>
        <MessagesContext.Provider value={{messages, setmessages}}>
