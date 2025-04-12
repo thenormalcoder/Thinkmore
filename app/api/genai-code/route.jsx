@@ -1,17 +1,17 @@
-// import { Genaicode } from "@/configs/GEMINICode";
-// import { NextResponse } from "next/server";
+import { Genaicode } from "@/configs/GEMINICode";
+import { NextResponse } from "next/server";
 
-// export async function POST(req) {
-//     const {prompt}=await req.json();
-//     try{
-//       const result=await Genaicode.sendMessage(prompt);
-//       const resp=result.response.text();
-//       return NextResponse.json(JSON.parse(resp));
-//     }catch(e)
-//     {
-//         return NextResponse.json({e});
-//     }
-// }
+export async function POST(req) {
+    const {prompt}=await req.json();
+    try{
+      const result=await Genaicode.sendMessage(prompt);
+      const resp=result.response.text();
+      return NextResponse.json(JSON.parse(resp));
+    }catch(e)
+    {
+        return NextResponse.json({e});
+    }
+}
 // import { Genaicode } from "@/configs/GEMINICode";
 // import { NextResponse } from "next/server";
 
@@ -28,29 +28,29 @@
 //   }
 // }
 
-import { Genaicode } from "@/configs/GEMINICode";
-import { NextResponse } from "next/server";
+// import { Genaicode } from "@/configs/GEMINICode";
+// import { NextResponse } from "next/server";
 
-export const runtime = "nodejs"; // ✅ Prevent Vercel edge timeouts (only for app router)
+// export const runtime = "nodejs"; // ✅ Prevent Vercel edge timeouts (only for app router)
 
-export async function POST(req) {
-  const { prompt } = await req.json();
+// export async function POST(req) {
+//   const { prompt } = await req.json();
 
-  try {
-    const result = await Genaicode.sendMessage(prompt);
+//   try {
+//     const result = await Genaicode.sendMessage(prompt);
 
-    // Await the text response (important!)
-    const text = await result.response.text();
+//     // Await the text response (important!)
+//     const text = await result.response.text();
 
-    // Return as proper JSON
-    return NextResponse.json({ response: text });
-  } catch (e) {
-    console.error("GENAI Error:", e);
+//     // Return as proper JSON
+//     return NextResponse.json({ response: text });
+//   } catch (e) {
+//     console.error("GENAI Error:", e);
 
-    return NextResponse.json(
-      { error: e.message || "Something went wrong." },
-      { status: 500 }
-    );
-  }
-}
+//     return NextResponse.json(
+//       { error: e.message || "Something went wrong." },
+//       { status: 500 }
+//     );
+//   }
+// }
 
