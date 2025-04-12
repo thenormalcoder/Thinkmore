@@ -37,27 +37,27 @@ const Provider = ({children}) => {
   }, [])
   const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
 
-  const handleGoogleLoginSuccess = (response) => {
-    // Handle the login success response
-    console.log(response);
-  };
+  // const handleGoogleLoginSuccess = (response) => {
+  //   // Handle the login success response
+  //   console.log(response);
+  // };
 
-  const handleGoogleLoginFailure = (error) => {
-    // Handle the login failure error
-    console.log(error);
-  };
+  // const handleGoogleLoginFailure = (error) => {
+  //   // Handle the login failure error
+  //   console.log(error);
+  // };
 
-  console.log("Google Client ID:", process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID);
-  const redirectUri = process.env.NEXT_PUBLIC_APP_URL || window.location.origin; // In production, `NEXT_PUBLIC_APP_URL` should be set in `.env.production`
+  // console.log("Google Client ID:", process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID);
+  // const redirectUri = process.env.NEXT_PUBLIC_APP_URL || window.location.origin; // In production, `NEXT_PUBLIC_APP_URL` should be set in `.env.production`
 
   return (
     <div>
       <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
-      <GoogleLogin
+      {/* <GoogleLogin
         onSuccess={handleGoogleLoginSuccess}
         onFailure={handleGoogleLoginFailure}
         redirectUri={redirectUri}  // This will automatically use the current URL
-      />
+      /> */}
       <PayPalScriptProvider options={{ clientId:process.env.NEXT_PUBLIC_PAYPAL_CLIENTID}}>
       <UserdetailContext.Provider value={{userdetails,setuserdetails}}>
        <MessagesContext.Provider value={{messages, setmessages}}>
