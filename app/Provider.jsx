@@ -52,7 +52,7 @@ const Provider = ({children}) => {
 
   return (
     <div>
-      <GoogleOAuthProvider redirectUri={redirectUri} clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
+      <GoogleOAuthProvider redirectUri="https://thinkmorecreatewebsiteonprompt.vercel.app" clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
       {/* <GoogleLogin
         onSuccess={handleGoogleLoginSuccess}
         onFailure={handleGoogleLoginFailure}
